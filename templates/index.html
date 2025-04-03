@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesheet.css') }}">
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    </head>
+    <body>
+        <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+                <div class="chat-bubble border-radius">Hello! Please input your Zip code then your symptoms to find a medical provider</div>
+            </div> 
+            <form class="padding border-radius box-shadow" onsubmit="handleSubmit(event)">
+                <label for="message">Your Message:</label>
+                <input type="text" id="message" name="inputText" placeholder="Type your message here..." class="border-radius">
+                <button type="submit" class="border-radius">Send</button>
+            </form>
+            <p class="white">*Please note this is not a medical professional, do not take advice from robots</p>
+        </div>
+    </body>
+</html>
